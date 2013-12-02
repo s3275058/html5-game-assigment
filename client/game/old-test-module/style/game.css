@@ -1,0 +1,8 @@
+body {
+	overflow: hidden;
+}
+
+canvas {
+	display: block;
+	border: 3px solid red;
+}

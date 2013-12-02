@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4bananas Game</title>
+    <link rel="stylesheet" type="text/css" href="css/heroList.css" media="screen"/>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+    <script src="js/hero_list.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600">
+    <!-- Insert fallback content here -->
+</canvas>
+<div class="wrapper" id="wrapper">
+    <div class="loading-wrap" id="loading-wrap">
+        <div class="triangle1"></div>
+        <div class="triangle2"></div>
+        <div class="triangle3"></div>
+    </div>
+</div>
+<!--Create Hero Div-->
+<div class="createHero" id="createHero">
+    <div id="red" onclick="setColor('red');"></div>
+    <div id="green" onclick="setColor('green');"></div>
+    <div id="blue" onclick="setColor('blue');"></div>
+    <input class="btn" type="submit" id="submit" value="Create Hero" onclick="btnClick();"/>
+    <input class="btn" type="submit" id="cancel" value="Back" onclick="backClick();"/>
+</div>
+<!--Choose Game Type-->
+<div class="gameType" id="gameType">
+    <div id="campaign" onclick="setGameType('campaign');">
+        <img class="ii" src="../login_registration/img/campain.jpg"/>
+    </div>
+    <div id="pvp" onclick="setGameType('pvp');">
+        <img src="../login_registration/img/pvp.jpg"/>
+    </div>
+    <input class="btn" type="submit" id="submitGame" value="Enter Game" onclick="btnGameClick();"/>
+    <input class="btn" type="submit" id="cancelGame" value="Back" onclick="backGameClick();"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>A multiplayer game built using HTML5 canvas and WebSockets</title>
+		<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="style/reset.css">
+		<link rel="stylesheet" href="style/game.css">
+		
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		
+		<script src="http://localhost:8000/socket.io/socket.io.js"></script>
+		<script src="js/requestAnimationFrame.js"></script>
+		<script src="js/Keys.js"></script>
+		<script src="js/Player.js"></script>
+		<script src="js/Bullet.js"></script>
+		<script src="js/game.js"></script>
+	</head>
+	
+	<body>
+		<canvas id="gameCanvas" width=400 height=300></canvas>
+		
+		<div class="row">
+			<div class="span4">
+				<ul id="msgs" class="unstyled"></ul>
+			</div>
+		</div>
+		
+		<div class="row">		
+			<div class="span5 offset2" id="chat">
+				<input type="text" class="input" placeholder="Your message" id="msg">
+				<input type="button" name="send" id="send" value="Send" class="btn btn-success">
+			</div>
+		</div>		
+		
+		<script>
+			// Initialise the game
+			init();			
+			animate();
+		</script>
+	</body>
+</html>

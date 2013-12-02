@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4bananas Game</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css" media="screen"/>
+    <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body>
+<div id="login">
+    <h1>Registration</h1>
+    <fieldset id="inputs">
+        <input id="username" type="username" placeholder="Username" autofocus required>
+        <input id="password" type="password" placeholder="Password" required>
+    </fieldset>
+    <fieldset id="actions">
+        <input type="submit" id="register" value="Register" onclick="registerUser();">
+        <a href="login.html">Login</a>
+    </fieldset>
+</div>
+</body>
+</html>
